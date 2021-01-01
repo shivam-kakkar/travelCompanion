@@ -66,21 +66,24 @@ if(localStorage.getItem('token') !== undefined){
     window.location.reload();
   }
   else if(e.target.id === "deleteAccount"){
+    if (window.confirm("Do you Confirm Account Deletion ?")) {
+      var delUser = localStorage.getItem('userName');
 
-    var delUser = localStorage.getItem('userName');
-
-    axios.delete(`http://localhost:8080/http://localhost:5000/deleteAccount/${delUser}`)
-    .then((result)=>{
-      if(result.data.status === 'deleted'){
-        localStorage.removeItem('token');
-        localStorage.removeItem('userName');
-        alert("Account deleted Successfully");
-        window.location.reload();
-      }
-    })
-    .catch((error)=>{
-      alert("something has went wrong");
-    })
+      axios.delete(`http://localhost:8080/http://localhost:5000/deleteAccount/${delUser}`)
+      .then((result)=>{
+        if(result.data.status === 'deleted'){
+          localStorage.removeItem('token');
+          localStorage.removeItem('userName');
+          alert("Account deleted Successfully");
+          window.location.reload();
+        }
+      })
+      .catch((error)=>{
+        alert("something has went wrong");
+      })
+    } else {
+      
+    }
   }
   else if(e.target.id === "menu"){
     if(window.outerWidth<450){
@@ -215,6 +218,7 @@ if(localStorage.getItem('token') !== undefined){
     var uname = document.getElementById("uname").value;
     var upass = document.getElementById("upass").value;
     var uCpass = document.getElementById("uCpass").value;
+    let statusR = '';
 
 
     if(fname==="" || lname==="" || uname==="" || upass==="" || uCpass===""){
@@ -250,13 +254,36 @@ if(localStorage.getItem('token') !== undefined){
           window.location.reload();
         }
         else if(result.data.status === "loginNow"){
-          alert("Signup succesfull. \n Now login using your credentials");
-          document.getElementById("welcomeDiv").style.display = "none";
-          window.location.reload();
+
+          statusR = 'success';
+
+          // alert("Signup succesfull. \n Now login using your credentials");
+          // document.getElementById("welcomeDiv").style.display = "none";
+          // window.location.reload();
         }
         
         
         
+      })
+      .then(()=>{
+        if(statusR === 'success'){
+          axios.post('http://localhost:8080/http://localhost:5000/login',({'userName':uname,'userPass':upass}))
+          .then((result)=>{
+            
+      
+            if(result.data.token==='invalid'){
+              alert("The username or password does not exist");
+            }
+            else{
+              localStorage.setItem('token',result.data.token);
+              localStorage.setItem('userName',uname)
+              window.location.reload();
+              document.getElementById("welcomeDiv").style.display = "none";
+            }
+            
+            
+          })     
+        }  
       })
       .catch()
 

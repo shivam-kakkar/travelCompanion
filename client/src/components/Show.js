@@ -109,15 +109,15 @@ const Show =()=>{
       </div>
 
 
-      <div id="content" class="section-dark">
+      <div id="content">
         <h1 id='destinationTitle'></h1>
         <div id="first"></div>
 
 
-        <section id="second" class="section2 section-dark">
+        <section id="second" class="section2">
             <p id="ing"></p>
             <div id="favButtonDiv">
-              <button class="btn btn-primary" id="favButton" onClick={fav}>Add to Favourites</button>
+              <button class="btn" id="favButton" onClick={fav}>Add to Favourites</button>
             </div>
         </section>
       </div>

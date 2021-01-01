@@ -1,4 +1,4 @@
-import React,{Component} from 'react';
+import React from 'react';
 var Push = require('push.js');
 
 // Push.create("Travel Companion",{body:'Welcome to Travel Companion',timeout:4000,icon:require('../images/logo.jpg')});
