@@ -69,7 +69,7 @@ if(localStorage.getItem('token') !== undefined){
 
     var delUser = localStorage.getItem('userName');
 
-    axios.post("http://localhost:8080/http://localhost:5000/deleteAccount",{'delUser':delUser})
+    axios.delete(`http://localhost:8080/http://localhost:5000/deleteAccount/${delUser}`)
     .then((result)=>{
       if(result.data.status === 'deleted'){
         localStorage.removeItem('token');

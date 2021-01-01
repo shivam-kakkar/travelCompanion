@@ -40,7 +40,7 @@ const Show =()=>{
       document.getElementById("main").style.display = "none";
       document.getElementById("content").style.display = "block";
 
-      axios.post("http://localhost:8080/http://localhost:5000/list")
+      axios.get("http://localhost:8080/http://localhost:5000/list")
       .then((result)=>{
         
         document.getElementById('first').innerHTML = "";
@@ -53,7 +53,7 @@ const Show =()=>{
         }
       })
 
-      axios.post('http://localhost:8080/http://localhost:5000/sendData',{'destinationName':destinationName})
+      axios.get(`http://localhost:8080/http://localhost:5000/sendData/${destinationName}`)
       .then((result)=>{
         document.getElementById('ing').innerHTML="";
           document.getElementById('ing').insertAdjacentHTML('beforeend',`
