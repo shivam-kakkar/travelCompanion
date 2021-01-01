@@ -1,0 +1,988 @@
+#addButton {
+  height: 3rem;
+  width: 7rem;
+  border-radius: 40px;
+}
+#addButton:hover {
+  height: 3.5rem;
+  width: 7.5rem;
+}
+#aSignUp {
+  cursor: pointer;
+}
+body {
+  background: linear-gradient(to right, #fad588, #f4ae84);
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+#particles-js {
+  height: 100%;
+  background: #f00;
+}
+#close {
+  text-align: right;
+}
+#cancel,
+#close2,
+#ulogin,
+#loginButton,
+#signUpButton,
+#aSignUp,
+#nSignUp,
+#login {
+  background: none;
+  border: 2px solid white;
+  border-radius: 40px;
+  transition: 0.25s;
+}
+#cancel:hover,
+#ulogin:hover,
+#loginButton:hover,
+#signUpButton:hover,
+#aSignUp:hover,
+#nSignUp:hover,
+#close2:hover {
+  /* height: 3rem;
+  width: 6rem; */
+  background: white;
+  color: #000;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+#content {
+  display: none;
+}
+.destinationIdentity {
+  margin-top: 0.5rem;
+}
+#form {
+  background: #191919;
+  height: 0;
+  /* border: 2px solid black; */
+  width: 30vw;
+  position: fixed;
+  z-index: 2;
+  display: block;
+  left: 35rem;
+  transition: 0.5s;
+}
+#first {
+  text-align: center;
+}
+#favCloseButton {
+  position: relative;
+  top: 0;
+  left: 13rem;
+  font-size: 36px;
+  margin-left: 50px;
+
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+#favCloseButton:hover {
+  color: #f1f1f1;
+}
+#favButton {
+  border-radius: 40px;
+  margin: 1rem;
+}
+#favButtonDiv {
+  text-align: center;
+  display: none;
+}
+FavoriteList {
+  width: 0;
+}
+#footer {
+  background-color: #000;
+  height: 3.5rem;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 25% 30% 15% 10% 20%;
+}
+#footerTitle {
+  font-family: "Luckiest Guy", cursive;
+  font-weight: bold;
+  margin: auto;
+  font-weight: bold;
+  color: white;
+  margin: auto;
+  font-size: 2rem;
+  text-align: center;
+}
+#header {
+  height: 4rem;
+  background-color: #000;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 5% 20% 40% 10% 15% 10%;
+}
+#headertitle {
+  font-family: "Luckiest Guy", cursive;
+  font-weight: bold;
+  color: white;
+  margin: auto;
+  font-size: 2rem;
+  text-align: center;
+}
+#logo {
+  margin: auto;
+  height: 3rem;
+  width: 3rem;
+  cursor: pointer;
+  display: none;
+}
+#heart2 {
+  display: none;
+}
+#menu {
+  margin: auto;
+  height: 3rem;
+  width: 3rem;
+  cursor: pointer;
+  background-color: white;
+  border-radius: 50%;
+  border: 1px solid black;
+  display: block;
+}
+.icon {
+  height: 2rem;
+  margin: 0.5rem;
+  cursor: pointer;
+}
+.icon:hover {
+  height: 2.5rem;
+}
+#main {
+  display: block;
+}
+#midCloseDiv {
+  display: none;
+}
+#iconImage {
+  margin: auto;
+}
+#ing {
+  font-family: "Luckiest Guy", cursive;
+  color: #111;
+}
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+  border-radius: 1rem;
+  border: 2px solid rgb(220, 248, 214);
+  width: 13rem;
+  transition: 0.25s;
+  text-align: center;
+}
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus {
+  width: 14rem;
+}
+input[type="text"]:hover,
+input[type="password"]:hover,
+input[type="email"]:hover {
+  width: 14rem;
+}
+#itemlist {
+  list-style-type: none;
+  /* background: linear-gradient(to right,#673AB7,#512DA8); */
+}
+.items {
+  margin: 1rem;
+  display: grid;
+  grid-template-columns: 20% 80%;
+  cursor: pointer;
+}
+.justified {
+  text-align: justify;
+}
+label {
+  text-align: center;
+  width: 10rem;
+}
+#listcontainer {
+  display: none;
+  /* background-color: #C0C0C0; */
+  background-color: #111;
+  border-right: 2px solid #000;
+  /*cursor: pointer;*/
+}
+#loading2 {
+  height: 100%;
+  width: 100%;
+}
+#loginPhoneButton {
+  display: none;
+}
+#login,
+#signup {
+  font-family: "Luckiest Guy", cursive;
+  height: 3rem;
+  width: 6rem;
+  margin: auto;
+  background: none;
+  border: 2px solid white;
+  transition: 0.25s;
+}
+#login:hover {
+  /* height: 3.5rem;
+  width: 6.5rem; */
+  background: white;
+  color: #000;
+}
+#loggedIn {
+  padding: 0.6rem;
+  cursor: pointer;
+}
+#signupDiv,
+#loginDiv {
+  height: 100%;
+  margin: auto;
+  background: #191919;
+}
+#menuBar {
+  background: #f5f5f5;
+  border: 2px solid black;
+  width: 0;
+  height: 40vh;
+  position: fixed;
+  z-index: 2;
+  display: block;
+  left: -4px;
+  transition: 0.5s;
+  top: 4rem;
+}
+#userMenuBar {
+  background: #f5f5f5;
+  border: 2px solid black;
+  width: 250px;
+  height: 30vh;
+  position: fixed;
+  z-index: 2;
+  display: block;
+  right: 125px;
+  transition: 0.5s;
+  top: 4rem;
+  display: none;
+}
+#middle {
+  display: grid;
+  grid-template-columns: 100% 0%;
+  width: 100%;
+}
+#nav {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  text-align: center;
+  font-weight: bold;
+  color: blue;
+  cursor: pointer;
+}
+
+#prev,
+#next {
+  width: 8rem;
+  border-radius: 40px;
+  background: none;
+  border: 2px solid white;
+  transition: 0.25s;
+  color: white;
+}
+#prev:hover,
+#next:hover {
+  background: white;
+  color: #000;
+}
+#privacy {
+  font-family: "Luckiest Guy", cursive;
+  font-weight: bold;
+  margin: auto;
+  color: white;
+  margin: auto;
+  font-size: 1rem;
+  text-align: center;
+}
+#destinationimg {
+  height: 3rem;
+  border-radius: 50%;
+  width: 3rem;
+}
+#destinationImg {
+  height: 100%;
+  width: 100%;
+}
+#destinationTitle {
+  text-align: center;
+  background-color: #282e34;
+  color: #ddd;
+  margin: 0;
+}
+.destinationIdentity {
+  color: #818181;
+  font-family: "Luckiest Guy", cursive;
+  font-size: 17px;
+}
+.destinationIdentity:hover {
+  color: #f1f1f1;
+}
+#listTitle {
+  text-align: center;
+  color: white;
+  margin: 0;
+}
+#root {
+  margin: 0;
+  background-color: white;
+}
+#searchbar {
+  width: 100%;
+  text-align: center;
+  height: 2.5rem;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: 0;
+  border-radius: 40px;
+  border: 2px solid white;
+  background: none;
+  color: white;
+}
+#searchbar:focus {
+  background: white;
+  color: #000;
+}
+#searchButton {
+  font-family: "Luckiest Guy", cursive;
+  border-radius: 40px;
+  height: 3rem;
+  width: 7rem;
+  margin: auto;
+  margin-left: 0.5rem;
+  background: none;
+  border: 2px solid white;
+  transition: 0.25s;
+  /*background-color: #FAD688;*/
+}
+#searchButton:hover {
+  /* height: 3.5rem;
+  width: 7.5rem; */
+  background: white;
+  color: #000;
+}
+#second {
+  display: grid;
+  grid-template-rows: auto auto;
+}
+#shopping {
+  margin: 0;
+  /*background: linear-gradient(to right,#FFB75E,#ED8F03);*/
+  background: #111;
+  display: block;
+  position: fixed;
+  top: 4rem;
+  right: 0;
+  height: 45rem;
+  width: 0;
+  transition: 0.25s;
+  /*background: linear-gradient(to right,#ed213a,#ED8F03);*/
+}
+#shoppingTitle {
+  text-align: center;
+}
+#show {
+  display: grid;
+  grid-template-rows: auto auto auto;
+  width: 100%;
+  margin: 0;
+  /*border-right: 2px solid orange;*/
+  /* background: linear-gradient(to right,#ed213a,#ED8F03); */
+  /*overflow-y: scroll;
+  height: 750px;*/
+}
+#show-Img {
+  height: 100%;
+  background-color: white;
+  margin: 1rem;
+}
+.userIcon {
+  /* margin-top: 0.5rem; */
+  height: 3rem;
+}
+.userButton {
+  color: white;
+  margin-top: 1rem;
+  font-size: 1.5rem;
+}
+/* .slider {
+	overflow-y: hidden;
+	max-height: 500px; approximate max height
+
+	transition-property: all;
+	transition-duration: .5s;
+	transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+} */
+td {
+  text-align: center;
+}
+#transparentBack {
+  display: none;
+  margin-top: -3rem;
+  position: fixed;
+  /* height: 100vh; */
+  height: 120vh;
+  width: 100vw;
+  background: #181818;
+  opacity: 0.9;
+  z-index: 1.9;
+}
+#itemlist {
+  text-align: left;
+}
+#listCloseButton {
+  position: relative;
+  top: 0;
+  left: 17rem;
+  height: 2rem;
+  font-size: 36px;
+  margin-left: 50px;
+
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+#listCloseButton:hover {
+  color: #f1f1f1;
+}
+#listCloseDiv {
+  display: grid;
+  grid-template-columns: 90% 10%;
+  display: block;
+}
+/* #slider{
+  height: 3rem;
+  width: 3rem;
+  display: none;
+} */
+
+#find {
+  border-radius: 40px;
+  height: 4rem;
+  width: 8rem;
+}
+/* #userLogin{
+  margin: auto;
+  height: 3rem;
+  width: 8rem;
+} */
+#welcome {
+  text-align: center;
+  background: #111;
+}
+#find {
+  display: none;
+}
+#bu {
+  width: 0rem;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+body {
+  background-color: #111;
+}
+
+.title {
+  font-family: "Montserrat";
+  text-align: center;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  letter-spacing: 1px;
+}
+
+.design {
+  background-image: url(https://media.giphy.com/media/26BROrSHlmyzzHf3i/giphy.gif);
+  background-size: cover;
+  color: transparent;
+  -moz-background-clip: text;
+  -webkit-background-clip: text;
+  text-transform: uppercase;
+  font-size: 120px;
+  line-height: 0.75;
+  margin: 10px 0;
+}
+/* styling my button */
+
+.white-mode {
+  text-decoration: none;
+  padding: 7px 10px;
+  background-color: #122;
+  border-radius: 3px;
+  color: #fff;
+  transition: 0.35s ease-in-out;
+  position: absolute;
+  left: 45rem;
+  bottom: 5rem;
+  font-family: "Montserrat";
+  border-radius: 40px;
+  height: 5rem;
+}
+
+.white-mode:hover {
+  background-color: #fff;
+  color: #122;
+}
+
+/* Parallax */
+
+body,
+html {
+  height: 100%;
+  margin: 0;
+  font-size: 16px;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.8em;
+  color: #666;
+}
+
+.pimg1,
+.pimg2,
+.pimg3 {
+  position: relative;
+  opacity: 0.7;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  /*
+    fixed = parallax
+    scroll = normal
+  */
+  background-attachment: fixed;
+}
+
+.pimg1 {
+  background-image: url("./images/image1.jpg");
+  height: 45rem;
+  min-height: 100%;
+}
+
+.pimg2 {
+  background-image: url("./images/image4.jpeg");
+  min-height: 400px;
+}
+
+.pimg3 {
+  background-image: url("./images/image3.jpg");
+  height: 45rem;
+  min-height: 400px;
+}
+
+.section {
+  text-align: center;
+  padding: 50px 80px;
+}
+.section2 {
+  padding: 50px 80px;
+}
+#hotel {
+  color: #111111;
+  text-decoration: none;
+}
+#hotel:hover {
+  color: #ddd;
+}
+
+.section-light {
+  font-size: 1.3rem;
+  background-color: #f4f4f4;
+  color: #666;
+}
+
+.section-dark {
+  background-color: #282e34;
+  color: #ddd;
+}
+
+.section-dark2 {
+  font-size: 1.3rem;
+  background-color: #282e34;
+  color: #ddd;
+}
+
+.ptext {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+  font-size: 27px;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+}
+
+.ptext .border {
+  background-color: #111;
+  color: #fff;
+  padding: 20px;
+}
+
+.ptext .border.trans {
+  background-color: transparent;
+}
+
+/* @media(max-width:568px){
+  .pimg1, .pimg2, .pimg3{
+    background-attachment:scroll;
+  }
+} */
+
+/* menu */
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 4rem;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav #menuCloseButton {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* Usermenu */
+
+.rightsidenav {
+  height: 30%;
+  width: 250px;
+  position: fixed;
+  z-index: 1;
+  top: 4rem;
+  right: 125px;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.rightsidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.rightsidenav a:hover {
+  color: #f1f1f1;
+}
+
+.rightsidenav #userMenuCloseButton {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* Partcles JS */
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+#particles-js {
+  height: 100%;
+  background: black;
+}
+
+/* Mobile View */
+
+@media (max-width: 450px) {
+  #searchbar {
+    display: none;
+  }
+  #login {
+    display: none;
+  }
+  #searchButton {
+    display: none;
+  }
+  #userButton {
+    display: none;
+  }
+  #header {
+    height: 3rem;
+    display: grid;
+    grid-template-columns: 15% 70% 15%;
+  }
+  #headertitle {
+    font-size: 1.5rem;
+  }
+  #menu {
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+  #logo {
+    display: none;
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+  #siteMap {
+    display: none;
+  }
+  #footerTitle {
+    font-size: 1.3rem;
+  }
+  #privacy {
+    display: none;
+  }
+  #footer {
+    font-family: "Luckiest Guy", cursive;
+    height: 3rem;
+    display: grid;
+    grid-template-columns: 50% 10% 40%;
+  }
+  .icon {
+    height: 1.5rem;
+    margin: 0.5rem;
+    cursor: pointer;
+  }
+  #middle {
+    display: grid;
+    grid-template-columns: 100% 0% 0%;
+  }
+  .design {
+    font-size: 50px;
+  }
+  .rightsidenav {
+    top: 10rem;
+    left: 0;
+  }
+  #userMenuBar {
+    top: 10rem;
+    left: 0;
+  }
+  .white-mode {
+    left: 10.5rem;
+    bottom: 9rem;
+  }
+  .sidenav {
+    top: 3rem;
+  }
+  .ptext {
+    font-size: 15px;
+    top: 40%;
+  }
+  #shopping {
+    width: 0;
+    top: 3rem;
+  }
+  #menuCloseButton {
+    display: block;
+    top: 8rem;
+    right: 15rem;
+  }
+  #loginPhoneButton {
+    display: block;
+  }
+  #form {
+    position: fixed;
+    top: -3px;
+    height: 0;
+    width: 100vw;
+    z-index: 2;
+    left: 0px;
+  }
+  #loggedIn {
+    margin-top: 0.5rem;
+    padding: 0;
+    display: block;
+    margin-left: 2rem;
+  }
+  .section {
+    padding: 50px 50px;
+  }
+  .section2 {
+    padding: 50px 50px;
+  }
+  /* .pimg1, .pimg2, .pimg3{
+    background-attachment:scroll;
+  } */
+}
+
+/* @media (max-width:450px) {
+  #searchbar{
+    display: none;
+  }
+  #login{
+    display: none;
+  }
+  #logo{
+    display: none;
+  }
+  #heart2{
+    height: 2.5rem;
+    width: 2.5rem;
+    display: block;
+    margin: auto;
+  }
+  #searchButton{
+    display: none;
+  }
+  #header{
+    height: 3rem;
+    display: grid;
+    grid-template-columns: 15% 70% 15%;
+  }
+  #headertitle{
+    margin: 0;
+    margin-left: 20px;
+    justify-self: left;
+  }
+  #menu{
+    display: block;
+    height: 2.5rem;
+    width: 2.5rem;
+    cursor: pointer;
+  }
+  #menuBar{
+    display: none;
+    grid-template-rows:10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+    position: fixed;
+    height: 40rem;
+    width: 80%;
+    left: -6px;
+    background-color: #181818;
+    border: 2px solid black;
+  }
+  #middle{
+    display: grid;
+    grid-template-columns: 100% 0% 0%;
+  }
+  #listCloseButton{
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+
+  }
+  #listcontainer{
+    border: 0;
+    text-align: left;
+    width: 100%;
+    background: linear-gradient(to right,#673AB7,#512DA8);
+
+  }
+  #midCloseDiv{
+    display: block;
+    text-align: right;
+  }
+  #listCloseDiv{
+    display: block;
+    text-align: right;
+  }
+  #search{
+    width: 100%;
+    border-radius: 0;
+  }
+  .menuItem{
+    cursor: pointer;
+  }
+  #form{
+    position: fixed;
+    top: 3rem;
+    height: 66vh;
+    width: 100vw;
+    z-index: 1;
+    left: 0px;
+    }
+    .destinationIdentity{
+      margin: 0;
+    }
+    #destinationImg{
+      height: 10rem;
+      width: 15rem;
+    }
+    #shopping{
+      display: none;
+      height: 50vw;
+    }
+    #footer{
+      display: grid;
+      grid-template-columns: 25% 10% 20% 15% 30%;
+      height: 4rem;
+    }
+    .icon{
+      height: 1rem;
+      margin: 0.5rem;
+      cursor: pointer;
+    }
+    #slider{
+      height: 1.5rem;
+      width: 1.5rem;
+      position: fixed;
+      top: 20rem;
+      left: 0px;
+    }
+    #new{
+      text-align: center;
+      margin: auto;
+      font-size: 2rem;
+      width: 100%;
+    }
+  #show{
+    display: none;
+  }
+  #welcome{
+    height: 71.5vh;
+    
+    display: grid;
+    grid-template-rows: 25% auto auto 45%;
+  }
+  #find{
+    position: relative;
+    left: 7.5rem;
+  }
+} */
