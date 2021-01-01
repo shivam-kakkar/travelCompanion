@@ -13,6 +13,7 @@ const routes = require('./routes');
 // app.use(express.static(path.join(__dirname,"../build")));
 const server  = require('http').createServer(app);
 let bodyParser = require('body-parser');
+const morgan = require('morgan');
 
 // app.get("/",(req,res,next)=>{
 //   res.sendFile(path.join(__dirname,"../build","index.html"));
@@ -20,6 +21,7 @@ let bodyParser = require('body-parser');
 
 app.use(bodyParser.urlencoded({extended: true,limit: '50mb'}))
 app.use(bodyParser.json({limit: '50mb',extended: true}))
+app.use(morgan('tiny'));
 app.use('/', routes);
     
 // app.use((req,res)=>{
