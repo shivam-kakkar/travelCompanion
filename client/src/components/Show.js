@@ -6,18 +6,21 @@ import ReactDOM from 'react-dom';
 const Show =()=>{
 
   const fav=()=>{
+    let resultN = '';
     axios.post('http://localhost:8080/http://localhost:5000/verifyToken',{'token':localStorage.getItem('token')})
     .then((result)=>{
       if(result.data.status=='valid'){
-        alert("Added to Favourites");
-        document.getElementById("list").innerHTML = "";
-        var name = document.getElementById("destinationTitle").textContent;
-        document.getElementById("listItem").insertAdjacentHTML('beforeend',
-            ` <li class="alert alert-warning alert-dismissable">
-                <button type="button" class="close" data-dismiss="alert">×</button>
-                ${name}
-              </li>
-            `)
+        // alert("Added to Favourites");
+        // document.getElementById("list").innerHTML = "";
+        // var name = document.getElementById("destinationTitle").textContent;
+        resultN = 'success';
+        // document.getElementById("listItem").insertAdjacentHTML('beforeend',
+        //     ` <li class="alert alert-warning alert-dismissable">
+        //         <button type="button" class="close" data-dismiss="alert">×</button>
+        //         ${name}
+        //       </li>
+        //     `)
+
       }
       else{
         alert("Login first");
@@ -25,6 +28,16 @@ const Show =()=>{
         document.getElementById('form').style.height="62vh";
         ReactDOM.render(<Login/>,document.getElementById('form'));
       }
+    })
+    .then(()=>{
+      // if(resultN === 'success')
+      // {
+        var name = document.getElementById("destinationTitle").textContent;
+        axios.post('http://localhost:8080/http://localhost:5000/addFavList',{'userName': localStorage.getItem('userName'),'listItem':name});
+        alert('Added to Favourites');
+        window.location.reload();
+        document.getElementById("listcontainer").style.display = "none";
+      // }
     })
 
   }

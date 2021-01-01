@@ -63,7 +63,7 @@ router.post('/signup',(req,res)=>{
     console.log(al);
     if(al == null){
         var pwd = crypto.SHA256(req.body.userPass).toString();
-        db.collection('users').insertOne({firstname:req.body.firstName,lastname:req.body.lastName,username:req.body.userName,password:pwd},(err,result)=>{
+        db.collection('users').insertOne({firstname:req.body.firstName,lastname:req.body.lastName,username:req.body.userName,password:pwd, favList: []},(err,result)=>{
         res.send({'status':'loginNow'})
         })
     }
@@ -86,7 +86,6 @@ router.post('/verifyToken',(req,res)=>{
     }
 })
 
-
 router.get('/sendData/:destinationName',(req,res)=>{
     db.collection('info').findOne({},(err,result)=>{
     res.send(result.info[req.params.destinationName])    
@@ -105,6 +104,21 @@ router.delete('/deleteAccount/:delUser',(req,res)=>{
     db.collection('users').deleteOne({username:req.params.delUser},(err,result)=>{
     res.send({'status':'deleted'});
     })
+})
+
+router.post('/addFavList',(req,res)=>{
+    db.collection('users').updateOne({username: req.body.userName}, {
+        $push: {
+            favList: req.body.listItem
+        }
+    })
+})
+
+router.get('/favList/:userName',(req,res)=>{
+    db.collection('users')
+        .findOne({username: req.params.userName},(err,result)=>{
+            res.send(result.favList);
+        })
 })
 
 module.exports = router;
