@@ -11,7 +11,7 @@ const Favlist =()=>{
     axios.get(`http://localhost:8080/http://localhost:5000/favList/${localStorage.getItem('userName')}`)
       .then((result)=>{
         console.log(result.data);
-        if(result.data.length != 0)
+        if(result.data.length !== 0)
         {
           document.getElementById("list").style.display = "none";
         }
@@ -30,7 +30,8 @@ const Favlist =()=>{
   }
 
   useEffect(()=>{
-    populate()
+    if(localStorage.getItem('userName') !== null)
+      populate()
   },[])
 
   return(

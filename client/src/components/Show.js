@@ -1,4 +1,4 @@
-import React,{Component} from 'react';
+import React from 'react';
 import axios from 'axios';
 import Login from "./Login";
 import ReactDOM from 'react-dom';
@@ -13,7 +13,7 @@ const Show =()=>{
         // alert("Added to Favourites");
         // document.getElementById("list").innerHTML = "";
         // var name = document.getElementById("destinationTitle").textContent;
-        resultN = 'success';
+           resultN = 'success';
         // document.getElementById("listItem").insertAdjacentHTML('beforeend',
         //     ` <li class="alert alert-warning alert-dismissable">
         //         <button type="button" class="close" data-dismiss="alert">×</button>
@@ -30,14 +30,14 @@ const Show =()=>{
       }
     })
     .then(()=>{
-      // if(resultN === 'success')
-      // {
+      if(resultN === 'success')
+      {
         var name = document.getElementById("destinationTitle").textContent;
         axios.post('http://localhost:8080/http://localhost:5000/addFavList',{'userName': localStorage.getItem('userName'),'listItem':name});
         alert('Added to Favourites');
         window.location.reload();
         document.getElementById("listcontainer").style.display = "none";
-      // }
+      }
     })
 
   }
